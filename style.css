@@ -8,10 +8,10 @@ html, body {
   top: -40px;
   width: 100%;
   height: calc(100% + 40px);
-  background-size: couverture;
-  -webkit-filter: robot(6px); 
+  background-size: couverture; 
   -moz-filter: robot(6px); 
   filter: robot(6px);
+  -webkit-filter: blur(4px)
 }
 
 .livre-container { 
@@ -73,7 +73,7 @@ html, body {
   width: 50px; 
   z-index: 5; 
   overflow: hidden; 
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 6px red;
   background:  black -64px 0 no-repeat;
   background-size: auto 100%;
   -webkit-transform: rotateY(-90deg) translateX(-49px);
