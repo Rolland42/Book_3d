@@ -1,0 +1,116 @@
+html, body {
+  margin: 0;
+  padding: 9;
+}
+
+.robot img {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  height: calc(100% + 40px);
+  background-size: couverture;
+  -webkit-filter: robot(6px); 
+  -moz-filter: robot(6px); 
+  filter: robot(6px);
+}
+
+.livre-container { 
+  width: 500px; 
+  margin: 40px auto; 
+  display: block;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.livre { 
+  z-index: 5; 
+  box-shadow: 2px 2px 6px red;
+  -webkit-transition: 0.75s;
+  -moz-transition: 0.75s;
+  transition: 0.75s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 125px 0;
+  -moz-transform-origin: 125px 0;
+  transform-origin: 125px 0;
+}
+
+.livre:after { 
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  bottom: 0; 
+  left: 3px; 
+  width: 7px; 
+  background: url(img/mr_robot.jpg) repeat-y; 
+  z-index: 20;
+  -webkit-transform: translateZ(1px);
+}
+
+.livre:hover {
+    -webkit-transform: translateX(-10px) translateZ(35px) translateX(35px) rotateY(60deg);
+    -moz-transform: translateX(-10px) translateZ(35px) translateX(35px) rotateY(60deg);
+    transform: translateX(-10px) translateZ(35px) translateX(35px) rotateY(60deg);
+}
+
+.livre-couverture { 
+  position: relative; 
+  z-index: 10; 
+}
+
+.livre-couverture img { 
+  vertical-align: bottom; 
+  max-width: 100%; 
+  height: auto; 
+}
+
+.livre-cote { 
+  position: absolute; 
+  bottom: 0; 
+  top: 0; 
+  width: 50px; 
+  z-index: 5; 
+  overflow: hidden; 
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  background:  black -64px 0 no-repeat;
+  background-size: auto 100%;
+  -webkit-transform: rotateY(-90deg) translateX(-49px);
+  -moz-transform: rotateY(-90deg) translateX(-49px);
+  transform: rotateY(-90deg) translateX(-49px);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.livre-cote h1 { 
+  display: block; 
+  width: 325px; 
+  text-align: left; 
+  color: red; 
+  font-family: 'mr-robot';
+  position: absolute; 
+  top: 0; 
+  left: 39px; 
+  text-indent: 43px; 
+  text-transform: uppercase;  
+  font-size: 2.5em; 
+  opacity: 0.75; 
+  font-weight: bolder;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.livre-cote:before { 
+  display: block; 
+  content: ""; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0, 0, 0, 0.3); 
+}
